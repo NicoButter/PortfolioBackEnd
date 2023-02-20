@@ -1,9 +1,14 @@
 package com.portfolio.butterfield.Controller;
 
+import com.portfolio.butterfield.Entity.Experiencia;
 import com.portfolio.butterfield.Entity.Persona;
 import com.portfolio.butterfield.Interface.InterfaceServicePersona;
+import com.portfolio.butterfield.Security.Controller.Mensaje;
+import com.portfolio.butterfield.Service.SExperiencia;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -20,6 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ControllerPersona {
     
     @Autowired InterfaceServicePersona servicioDePersona;
+    @Autowired SExperiencia sExperiencia;
     
     @GetMapping("/personas/traer")
     public List<Persona> getPersona(){
@@ -58,4 +64,13 @@ public class ControllerPersona {
     public Persona findPersona(){
         return servicioDePersona.findPersona((long)1);
     }
+    
+    @GetMapping("/detail/{id}")
+    public ResponseEntity<Experiencia> getById(@PathVariable("id") int id){
+        if(!sExperiencia.existsById(id))
+            return new ResponseEntity(new Mensaje("no existe"), HttpStatus.NOT_FOUND);
+        Experiencia experiencia = sExperiencia.getOne(id).get();
+        return new ResponseEntity(experiencia, HttpStatus.OK);
+    }
+    
 }
