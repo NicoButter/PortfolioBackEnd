@@ -1,37 +1,49 @@
 package com.portfolio.butterfield.Service;
 
 import com.portfolio.butterfield.Entity.Persona;
-import com.portfolio.butterfield.Interface.InterfaceServicePersona;
 import com.portfolio.butterfield.Repository.InterfaceRepositoryPersona;
 import java.util.List;
+import java.util.Optional;
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ServicePersona implements InterfaceServicePersona{
+@Transactional
+public class ServicePersona{
     
     //INYECCION DE DEPEDENCIA
-    @Autowired InterfaceRepositoryPersona repositorioDePersona;
+    @Autowired 
+    InterfaceRepositoryPersona repositorioDePersona;
     
-    @Override
-    public List<Persona> getPersona() {
-        List<Persona> personas = repositorioDePersona.findAll();
-        return personas;
+    public List<Persona> list(){
+        return repositorioDePersona.findAll();
     }
-
-    @Override
-    public void savePersona(Persona persona) {
+    
+    public Optional<Persona> getOne(int id){
+        return repositorioDePersona.findById(id);
+    }
+    
+    public Optional<Persona> getByNombre(String nombre){
+        return repositorioDePersona.findByNombre(nombre);
+    }
+    
+    public void save (Persona persona){
         repositorioDePersona.save(persona);
     }
-
-    @Override
-    public void deletePersona(Long id) {
+    
+    public void delete(int id){
         repositorioDePersona.deleteById(id);
     }
-
-    @Override
-    public Persona findPersona(Long id) {
-        Persona persona = repositorioDePersona.findById(id).orElse(null);
-        return persona;
-    } 
+    
+    public boolean existsByNombre(String nombre){
+        return repositorioDePersona.existsByNombre(nombre);
+    }
+    
+    public boolean existsById(int id){
+        return repositorioDePersona.existsById(id);
+    }
+    
 }
+
