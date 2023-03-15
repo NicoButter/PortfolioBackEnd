@@ -41,7 +41,6 @@ public class CExperiencia {
         return new ResponseEntity(experiencia, HttpStatus.OK);
     }
     
-    
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody DtoExperiencia dtoexp){
         if(StringUtils.isBlank(dtoexp.getNombreE()))
