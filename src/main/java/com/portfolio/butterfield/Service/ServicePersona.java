@@ -6,7 +6,6 @@ import java.util.List;
 import java.util.Optional;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
-import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 import org.springframework.stereotype.Service;
 
 @Service
