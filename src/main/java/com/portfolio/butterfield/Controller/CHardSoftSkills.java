@@ -28,7 +28,7 @@ public class CHardSoftSkills {
     SHardSoftSkills shys;
     
     @GetMapping("/lista")
-    public ResponseEntity<List<HardSoftSkills>> list(){
+    public ResponseEntity<List<HardSoftSkills>> lista(){
         List<HardSoftSkills> list = shys.list();
         return new ResponseEntity(list,HttpStatus.OK);
     }

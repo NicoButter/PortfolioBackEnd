@@ -29,7 +29,7 @@ public class Ceducacion {
     Seducacion sEducacion;
     
     @GetMapping("/lista")
-    public ResponseEntity<List<Educacion>> list(){
+    public ResponseEntity<List<Educacion>> lista(){
          List<Educacion> list = sEducacion.list();
          return new ResponseEntity(list, HttpStatus.OK);
     }

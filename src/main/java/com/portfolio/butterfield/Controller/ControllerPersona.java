@@ -25,7 +25,7 @@ public class ControllerPersona {
     ServicePersona personaService;
     
     @GetMapping("/lista")
-    public ResponseEntity<List<Persona>> list(){
+    public ResponseEntity<List<Persona>> lista(){
         List<Persona> list = personaService.list();
         return new ResponseEntity(list, HttpStatus.OK);
     }

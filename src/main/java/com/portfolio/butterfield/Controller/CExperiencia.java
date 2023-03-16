@@ -28,7 +28,7 @@ public class CExperiencia {
     SExperiencia sExperiencia;
     
     @GetMapping("/lista")
-    public ResponseEntity<List<Experiencia>>list(){
+    public ResponseEntity<List<Experiencia>>lista(){
         List<Experiencia> list = sExperiencia.list();
         return new ResponseEntity(list,HttpStatus.OK);
     }
