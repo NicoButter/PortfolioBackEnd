@@ -4,7 +4,6 @@ import javax.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter@Setter
 public class DtoPersona {
     
     @NotBlank
@@ -28,5 +27,39 @@ public class DtoPersona {
         this.descripcion = descripcion;
         this.img = img;
     }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
+
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+    
+    
     
 }

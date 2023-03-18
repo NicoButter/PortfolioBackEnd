@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,7 +26,7 @@ public class ControllerPersona {
     ServicePersona personaService;
     
     @GetMapping("/lista")
-    public ResponseEntity<List<Persona>> lista(){
+    public ResponseEntity<List<Persona>> list(){
         List<Persona> list = personaService.list();
         return new ResponseEntity(list, HttpStatus.OK);
     }
@@ -40,7 +41,7 @@ public class ControllerPersona {
     }
     
     @PutMapping("/update/{id}")
-    public ResponseEntity<?> update(@PathVariable("id") int id, DtoPersona dtoPersona){
+    public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody DtoPersona dtoPersona){
         if(!personaService.existsById(id)){
             return new ResponseEntity(new Mensaje("No se encuentra esa persona."), HttpStatus.NOT_FOUND);
         }
@@ -48,7 +49,7 @@ public class ControllerPersona {
             return new ResponseEntity(new Mensaje("Este nombre ya existe"), HttpStatus.BAD_REQUEST);
         }
         if(StringUtils.isBlank(dtoPersona.getNombre())){
-            return new ResponseEntity(new Mensaje("El campo no puede estar vacio."), HttpStatus.BAD_REQUEST);
+            return new ResponseEntity(new Mensaje("El campo nombre no puede estar vacio."), HttpStatus.BAD_REQUEST);
         }
         
         Persona persona = personaService.getOne(id).get();
