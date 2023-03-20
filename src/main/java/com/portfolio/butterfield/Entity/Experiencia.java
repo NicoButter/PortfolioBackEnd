@@ -48,6 +48,4 @@ public class Experiencia {
         return descripcionE;
     }
     
-    
-    
 }
