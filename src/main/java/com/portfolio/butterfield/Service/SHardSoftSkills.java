@@ -15,7 +15,7 @@ public class SHardSoftSkills {
     @Autowired
     RHardSoftSkills rhys;
     
-    public List<HardSoftSkills> list (){
+    public List<HardSoftSkills> list(){
         return rhys.findAll();      
     }
     

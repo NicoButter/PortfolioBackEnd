@@ -1,13 +1,8 @@
-com\portfolio\butterfield\Dto\DtoEducacion.class
 com\portfolio\butterfield\Security\Entity\Usuario.class
 com\portfolio\butterfield\Controller\CExperiencia.class
-com\portfolio\butterfield\Service\Seducacion.class
 com\portfolio\butterfield\Security\Controller\AuthController.class
 com\portfolio\butterfield\Dto\DtoPersona.class
 com\portfolio\butterfield\Security\MainSecurity.class
-com\portfolio\butterfield\Controller\Ceducacion.class
-com\portfolio\butterfield\Controller\ControllerPersona.class
-com\portfolio\butterfield\Service\ServicePersona.class
 com\portfolio\butterfield\Security\Service\UserDetailsImplement.class
 com\portfolio\butterfield\Entity\Persona.class
 com\portfolio\butterfield\Repository\RExperiencia.class
@@ -15,9 +10,7 @@ com\portfolio\butterfield\Security\Entity\UsuarioPrincipal.class
 com\portfolio\butterfield\Security\Dto\LoginUsuario.class
 com\portfolio\butterfield\Security\jwt\JwtTokenFilter.class
 com\portfolio\butterfield\Dto\DtoExperiencia.class
-com\portfolio\butterfield\Controller\CHardSoftSkills.class
 com\portfolio\butterfield\Entity\Experiencia.class
-com\portfolio\butterfield\Dto\DtoHardSoftSkills.class
 com\portfolio\butterfield\Security\jwt\JwtProvider.class
 com\portfolio\butterfield\Repository\REducacion.class
 com\portfolio\butterfield\Service\SExperiencia.class
@@ -32,9 +25,6 @@ com\portfolio\butterfield\Security\Entity\Rol.class
 com\portfolio\butterfield\Repository\InterfaceRepositoryPersona.class
 com\portfolio\butterfield\Security\Dto\JwtDto.class
 com\portfolio\butterfield\Security\Repository\InterfaceRolRepository.class
-com\portfolio\butterfield\ButterfieldApplication.class
 com\portfolio\butterfield\Security\Dto\NuevoUsuario.class
-com\portfolio\butterfield\WebConfig.class
-com\portfolio\butterfield\Security\Controller\Mensaje.class
 com\portfolio\butterfield\Security\jwt\JwtEntryPoint.class
 com\portfolio\butterfield\Repository\RHardSoftSkills.class
