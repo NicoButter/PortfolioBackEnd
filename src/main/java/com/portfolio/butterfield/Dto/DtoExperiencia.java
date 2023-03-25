@@ -1,8 +1,6 @@
 package com.portfolio.butterfield.Dto;
 
 import javax.validation.constraints.NotBlank;
-import lombok.Getter;
-import lombok.Setter;
 
 public class DtoExperiencia {
     
@@ -10,22 +8,22 @@ public class DtoExperiencia {
     private String nombreE;
     
     @NotBlank
-    private String descriptionE;
+    private String descripcionE;
 
     public DtoExperiencia() {
     }
 
-    public DtoExperiencia(String nombreE, String descriptionE) {
+    public DtoExperiencia(String nombreE, String descripcionE) {
         this.nombreE = nombreE;
-        this.descriptionE = descriptionE;
+        this.descripcionE = descripcionE;
     }
 
     public String getNombreE() {
         return nombreE;
     }
 
-    public String getDescriptionE() {
-        return descriptionE;
+    public String getDescripcionE() {
+        return descripcionE;
     }
 
     public void setNombreE(String nombreE) {
@@ -33,9 +31,7 @@ public class DtoExperiencia {
     }
 
     public void setDescriptionE(String descriptionE) {
-        this.descriptionE = descriptionE;
+        this.descripcionE = descripcionE;
     }
-    
-    
     
 }

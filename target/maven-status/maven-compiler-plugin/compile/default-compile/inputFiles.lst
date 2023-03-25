@@ -14,6 +14,8 @@ C:\Users\usu1\Documents\GitHub\PortfolioBackEnd\src\main\java\com\portfolio\butt
 C:\Users\usu1\Documents\GitHub\PortfolioBackEnd\src\main\java\com\portfolio\butterfield\Security\jwt\JwtProvider.java
 C:\Users\usu1\Documents\GitHub\PortfolioBackEnd\src\main\java\com\portfolio\butterfield\Dto\DtoEducacion.java
 C:\Users\usu1\Documents\GitHub\PortfolioBackEnd\src\main\java\com\portfolio\butterfield\Security\MainSecurity.java
+C:\Users\usu1\Documents\GitHub\PortfolioBackEnd\src\main\java\com\portfolio\butterfield\Dto\DtoProject.java
+C:\Users\usu1\Documents\GitHub\PortfolioBackEnd\src\main\java\com\portfolio\butterfield\Controller\CProject.java
 C:\Users\usu1\Documents\GitHub\PortfolioBackEnd\src\main\java\com\portfolio\butterfield\Dto\DtoPersona.java
 C:\Users\usu1\Documents\GitHub\PortfolioBackEnd\src\main\java\com\portfolio\butterfield\Service\ServicePersona.java
 C:\Users\usu1\Documents\GitHub\PortfolioBackEnd\src\main\java\com\portfolio\butterfield\Repository\RHardSoftSkills.java
@@ -22,6 +24,7 @@ C:\Users\usu1\Documents\GitHub\PortfolioBackEnd\src\main\java\com\portfolio\butt
 C:\Users\usu1\Documents\GitHub\PortfolioBackEnd\src\main\java\com\portfolio\butterfield\Controller\CHardSoftSkills.java
 C:\Users\usu1\Documents\GitHub\PortfolioBackEnd\src\main\java\com\portfolio\butterfield\Security\Dto\NuevoUsuario.java
 C:\Users\usu1\Documents\GitHub\PortfolioBackEnd\src\main\java\com\portfolio\butterfield\Entity\Educacion.java
+C:\Users\usu1\Documents\GitHub\PortfolioBackEnd\src\main\java\com\portfolio\butterfield\Entity\Project.java
 C:\Users\usu1\Documents\GitHub\PortfolioBackEnd\src\main\java\com\portfolio\butterfield\Entity\Experiencia.java
 C:\Users\usu1\Documents\GitHub\PortfolioBackEnd\src\main\java\com\portfolio\butterfield\Security\jwt\JwtTokenFilter.java
 C:\Users\usu1\Documents\GitHub\PortfolioBackEnd\src\main\java\com\portfolio\butterfield\Service\Seducacion.java
@@ -32,6 +35,8 @@ C:\Users\usu1\Documents\GitHub\PortfolioBackEnd\src\main\java\com\portfolio\butt
 C:\Users\usu1\Documents\GitHub\PortfolioBackEnd\src\main\java\com\portfolio\butterfield\Repository\InterfaceRepositoryPersona.java
 C:\Users\usu1\Documents\GitHub\PortfolioBackEnd\src\main\java\com\portfolio\butterfield\Security\Controller\AuthController.java
 C:\Users\usu1\Documents\GitHub\PortfolioBackEnd\src\main\java\com\portfolio\butterfield\Security\Entity\Rol.java
+C:\Users\usu1\Documents\GitHub\PortfolioBackEnd\src\main\java\com\portfolio\butterfield\Service\ServiceProject.java
+C:\Users\usu1\Documents\GitHub\PortfolioBackEnd\src\main\java\com\portfolio\butterfield\Repository\RepositorioProject.java
 C:\Users\usu1\Documents\GitHub\PortfolioBackEnd\src\main\java\com\portfolio\butterfield\Security\Entity\UsuarioPrincipal.java
 C:\Users\usu1\Documents\GitHub\PortfolioBackEnd\src\main\java\com\portfolio\butterfield\Entity\HardSoftSkills.java
 C:\Users\usu1\Documents\GitHub\PortfolioBackEnd\src\main\java\com\portfolio\butterfield\Security\jwt\JwtEntryPoint.java

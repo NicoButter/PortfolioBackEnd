@@ -16,5 +16,4 @@ public interface RExperiencia extends JpaRepository<Experiencia, Integer>{
     
     public boolean existsById(int Id);
     
-    
 }
