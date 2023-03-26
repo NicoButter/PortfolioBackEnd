@@ -52,7 +52,7 @@ public class Ceducacion {
         return new ResponseEntity(new Mensaje("Educacion eliminada"), HttpStatus.OK);
     }
     
-    @PostMapping("create")
+    @PostMapping("create/")
     public ResponseEntity<?> create(@RequestBody DtoEducacion dtoEducacion){
         if(StringUtils.isBlank(dtoEducacion.getNombreE())){
             return new ResponseEntity(new Mensaje("El nombre es obligatorio,"), HttpStatus.BAD_REQUEST);
