@@ -69,6 +69,7 @@ public class CHardSoftSkills {
             return new ResponseEntity(new Mensaje("Esa habilidad ya existe"), HttpStatus.BAD_REQUEST);
         if(StringUtils.isBlank(dtohys.getNombre()))
             return new ResponseEntity(new Mensaje("El nombre no puede estar vacío."), HttpStatus.BAD_REQUEST);
+        
         HardSoftSkills hys = shys.getOne(id).get();
         
         hys.setNombre(dtohys.getNombre());
