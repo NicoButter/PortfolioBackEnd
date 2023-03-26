@@ -16,14 +16,19 @@ public class HardSoftSkills {
     private int id;
     
     private String nombre;
+    
     private int porcentaje;
 
+    private String img;
+    
+    
     public HardSoftSkills() {
     }
 
-    public HardSoftSkills(String nombre, int porcentaje) {
+    public HardSoftSkills(String nombre, int porcentaje, String img) {
         this.nombre = nombre;
         this.porcentaje = porcentaje;
+        this.img = img;
     }   
     
 }

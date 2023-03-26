@@ -55,7 +55,7 @@ public class CHardSoftSkills {
             return new ResponseEntity(new Mensaje("El nombre es obligatorio"), HttpStatus.BAD_REQUEST);
         if(shys.existsByNombre(dtohys.getNombre()))
             return new ResponseEntity(new Mensaje("Esa habilidad ya existe"),HttpStatus.BAD_REQUEST);
-        HardSoftSkills hys = new HardSoftSkills(dtohys.getNombre(), dtohys.getPorcentaje());
+        HardSoftSkills hys = new HardSoftSkills(dtohys.getNombre(), dtohys.getPorcentaje(), dtohys.getImg());
         shys.save(hys);
         
         return new ResponseEntity(new Mensaje("Habilidad agregada con éxito."), HttpStatus.OK);
@@ -70,8 +70,11 @@ public class CHardSoftSkills {
         if(StringUtils.isBlank(dtohys.getNombre()))
             return new ResponseEntity(new Mensaje("El nombre no puede estar vacío."), HttpStatus.BAD_REQUEST);
         HardSoftSkills hys = shys.getOne(id).get();
+        
         hys.setNombre(dtohys.getNombre());
         hys.setPorcentaje(dtohys.getPorcentaje());
+        hys.setImg(dtohys.getImg());
+        
         shys.save(hys);
         return new ResponseEntity(new Mensaje("Habilidad actualizada con éxito"), HttpStatus.OK);
     }    
