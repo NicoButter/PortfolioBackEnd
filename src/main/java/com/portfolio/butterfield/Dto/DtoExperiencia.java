@@ -1,37 +1,24 @@
 package com.portfolio.butterfield.Dto;
 
 import javax.validation.constraints.NotBlank;
+import lombok.Getter;
+import lombok.Setter;
 
+@Setter@Getter
 public class DtoExperiencia {
     
     @NotBlank
-    private String nombreE;
+    private String nombre;
     
     @NotBlank
-    private String descripcionE;
+    private String descripcion;
 
     public DtoExperiencia() {
     }
 
-    public DtoExperiencia(String nombreE, String descripcionE) {
-        this.nombreE = nombreE;
-        this.descripcionE = descripcionE;
-    }
-
-    public String getNombreE() {
-        return nombreE;
-    }
-
-    public String getDescripcionE() {
-        return descripcionE;
-    }
-
-    public void setNombreE(String nombreE) {
-        this.nombreE = nombreE;
-    }
-
-    public void setDescriptionE(String descriptionE) {
-        this.descripcionE = descripcionE;
+    public DtoExperiencia(String nombre, String descripcion) {
+        this.nombre = nombre;
+        this.descripcion = descripcion;
     }
     
 }

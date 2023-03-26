@@ -8,11 +8,11 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface RExperiencia extends JpaRepository<Experiencia, Integer>{
     
-    public Optional<Experiencia> findByNombreE(String nombreE);
+    public Optional<Experiencia> findByNombre(String nombre);
     
     //public Optional<Experiencia> findById(int id);
     
-    public boolean existsByNombreE(String nombreE);
+    public boolean existsByNombre(String nombre);
     
     public boolean existsById(int Id);
     
