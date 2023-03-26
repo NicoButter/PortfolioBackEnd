@@ -19,16 +19,16 @@ public class HardSoftSkills {
     
     private int porcentaje;
 
-    private String img;
+    /*private String img;*/
     
     
     public HardSoftSkills() {
     }
 
-    public HardSoftSkills(String nombre, int porcentaje, String img) {
+    public HardSoftSkills(String nombre, int porcentaje/*, String img*/) {
         this.nombre = nombre;
         this.porcentaje = porcentaje;
-        this.img = img;
+        /*this.img = img;*/
     }   
     
 }

@@ -12,16 +12,16 @@ public class DtoHardSoftSkills {
     @NotBlank
     private int porcentaje;
     
-    @NotBlank
-    private String img;
+    /*@NotBlank
+    private String img;*/
 
     public DtoHardSoftSkills() {
     }
 
-    public DtoHardSoftSkills(String nombre, int porcentaje, String img) {
+    public DtoHardSoftSkills(String nombre, int porcentaje/*, String img*/) {
         this.nombre = nombre;
         this.porcentaje = porcentaje;
-        this.img = img;
+        /*this.img = img;*/
     }
     
 }
