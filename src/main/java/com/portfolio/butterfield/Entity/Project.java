@@ -19,7 +19,6 @@ public class Project {
     private int id;
     
     @NotNull
-    @Size(min = 1, max = 30, message = "Error, el nomnbre debe contener mas de un caracter y menos de 30.")
     private String nombre;
      
     @NotNull
