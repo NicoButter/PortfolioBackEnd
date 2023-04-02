@@ -18,20 +18,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/personas")
-@CrossOrigin(origins = {"http://localhost:4200/", "https://portfoliofrontendbutterfield.web.app"})
+@RequestMapping("personas")
+@CrossOrigin(origins = {"http://localhost:4200/", "https://portfoliofrontendbutterfield.web.app/"})
 public class ControllerPersona {
     
     @Autowired
     ServicePersona personaService;
     
-    @GetMapping("/lista")
+    @GetMapping("lista")
     public ResponseEntity<List<Persona>> list(){
         List<Persona> list = personaService.list();
         return new ResponseEntity(list, HttpStatus.OK);
     }
    
-    @GetMapping("/detail/{id}")
+    @GetMapping("detail/{id}")
     public ResponseEntity<Persona> getById(@PathVariable("id") int id){
         if(!personaService.existsById(id)){
             return new ResponseEntity(new Mensaje("No existe el ID"), HttpStatus.BAD_REQUEST);
@@ -40,7 +40,7 @@ public class ControllerPersona {
         return new ResponseEntity(persona, HttpStatus.OK);
     }
     
-    @PutMapping("/update/{id}")
+    @PutMapping("update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody DtoPersona dtoPersona){
         if(!personaService.existsById(id)){
             return new ResponseEntity(new Mensaje("No se encuentra esa persona."), HttpStatus.NOT_FOUND);

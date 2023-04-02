@@ -20,20 +20,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/projects")
-@CrossOrigin(origins = {"http://localhost:4200/", "https://portfoliofrontendbutterfield.web.app"})
+@RequestMapping("projects")
+@CrossOrigin(origins = {"http://localhost:4200/", "https://portfoliofrontendbutterfield.web.app/"})
 public class CProject {
     
     @Autowired
     ServiceProject projectService;
     
-    @GetMapping("/lista")
+    @GetMapping("lista")
     public ResponseEntity<List<Project>> list(){
         List<Project> list = projectService.list();
         return new ResponseEntity(list, HttpStatus.OK);
     }
    
-    @GetMapping("/detail/{id}")
+    @GetMapping("detail/{id}")
     public ResponseEntity<Project> getById(@PathVariable("id") int id){
         if(!projectService.existsById(id)){
             return new ResponseEntity(new Mensaje("No existe el ID"), HttpStatus.BAD_REQUEST);
@@ -42,7 +42,7 @@ public class CProject {
         return new ResponseEntity(project, HttpStatus.OK);
     }
     
-    @PostMapping("/create")
+    @PostMapping("create")
     public ResponseEntity<?> create(@RequestBody DtoProject dtoProject){
         if(StringUtils.isBlank(dtoProject.getNombre()))
             return new ResponseEntity(new Mensaje("El nombre del proyecto es obligatorio."), HttpStatus.BAD_REQUEST);
@@ -54,7 +54,7 @@ public class CProject {
         return new ResponseEntity(new Mensaje("Experiencia agregada con éxito."), HttpStatus.OK);
     }
     
-    @DeleteMapping("/delete/{id}")
+    @DeleteMapping("delete/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") int id){
         if(!projectService.existsById(id)){
             return new ResponseEntity(new Mensaje("Error al intentar eliminar el proyecto solicitado, reintente."), HttpStatus.NOT_FOUND);
@@ -63,7 +63,7 @@ public class CProject {
         return new ResponseEntity(new Mensaje("Proyecto eliminado con éxito."), HttpStatus.OK);
     }
     
-    @PutMapping("/update/{id}")
+    @PutMapping("update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody DtoProject dtoProject){
         if(!projectService.existsById(id)){
             return new ResponseEntity(new Mensaje("No se encuentra el proyecto."), HttpStatus.NOT_FOUND);
