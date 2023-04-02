@@ -21,20 +21,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("educacion")
-@CrossOrigin(origins = {"http://localhost:4200/", "https://portfoliofrontendbutterfield.web.app/"})
+@RequestMapping("/educacion")
+@CrossOrigin(origins = {"https://portfoliofrontendbutterfield.web.app", "http://localhost:4200"})
 public class Ceducacion {
     
     @Autowired
     Seducacion sEducacion;
     
-    @GetMapping("lista")
+    @GetMapping("/lista")
     public ResponseEntity<List<Educacion>> lista(){
          List<Educacion> list = sEducacion.list();
          return new ResponseEntity(list, HttpStatus.OK);
     }
     
-    @GetMapping("detail/{id}")
+    @GetMapping("/detail/{id}")
     public ResponseEntity<Educacion> getById(@PathVariable ("id") int id){
         if(!sEducacion.existsById(id)){
             return new ResponseEntity(new Mensaje("No existe el registro"), HttpStatus.BAD_REQUEST);
@@ -43,7 +43,7 @@ public class Ceducacion {
         return new ResponseEntity(educacion, HttpStatus.OK);
     }
         
-    @DeleteMapping("delete/{id}")
+    @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") int id){
         if(!sEducacion.existsById(id)){
             return new ResponseEntity(new Mensaje("No existe ese ID."), HttpStatus.NOT_FOUND);
@@ -52,7 +52,7 @@ public class Ceducacion {
         return new ResponseEntity(new Mensaje("Educacion eliminada"), HttpStatus.OK);
     }
     
-    @PostMapping("create")
+    @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody DtoEducacion dtoEducacion){
         if(StringUtils.isBlank(dtoEducacion.getNombreE())){
             return new ResponseEntity(new Mensaje("El nombre es obligatorio,"), HttpStatus.BAD_REQUEST);
@@ -66,7 +66,7 @@ public class Ceducacion {
         return new ResponseEntity(new Mensaje("Educación creada con éxito"), HttpStatus.OK);
     }
     
-    @PutMapping("update/{id}")
+    @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody DtoEducacion dtoEducacion){
         if(!sEducacion.existsById(id)){
             return new ResponseEntity (new Mensaje("No existe el registro."), HttpStatus.NOT_FOUND);
